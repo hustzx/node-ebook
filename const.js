@@ -1,4 +1,12 @@
-const resUrl = 'http://192.168.200.1:8081'; // 资源基础路径
+const env =require('env');
+
+let resUrl;
+if (env === 'dev') {
+    resUrl = 'http://192.168.200.1:8081'; // 资源基础路径
+} else if (env === 'prod') {
+    resUrl = 'http://47.100.62.144'
+}
+
 const category = [
     'Biomedicine',
     'BusinessandManagement',
